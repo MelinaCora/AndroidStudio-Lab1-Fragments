@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lab1_AppMoviles</string>
+    <string name="saludo">¡Hola!</string>
+    <string name="Bienvenida">Bienvenido/a</string>
+    <string name="sub_bienvenida">Bienvenido/a a la app</string>
+    <string name="volver">Volver</string>
+    <string name="continuar">Continuar</string>
+    <string name="input">"Ingresa tu nombre"</string>
+</resources>

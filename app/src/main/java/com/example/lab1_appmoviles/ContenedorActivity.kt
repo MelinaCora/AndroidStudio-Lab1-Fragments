@@ -9,12 +9,13 @@ import androidx.core.view.WindowInsetsCompat
 class ContenedorActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_contenedor)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        // Solo cargamos el Fragment inicial si es la primera vez.
+        // Si savedInstanceState != null, el sistema ya restauro el Fragment.
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainer, PrincipalFragment())
+                .commit()
         }
     }
 }

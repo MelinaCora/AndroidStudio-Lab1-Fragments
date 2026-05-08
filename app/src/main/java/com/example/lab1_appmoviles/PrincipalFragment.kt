@@ -16,6 +16,7 @@ class PrincipalFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
+
         return inflater.inflate(
             R.layout.fragment_principal,
             container,
@@ -35,4 +36,5 @@ class PrincipalFragment : Fragment() {
             .supportActionBar
             ?.title = "Bienvenida"
     }
+
 }

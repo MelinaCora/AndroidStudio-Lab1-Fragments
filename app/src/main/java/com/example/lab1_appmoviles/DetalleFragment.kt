@@ -35,6 +35,10 @@ class DetalleFragment : Fragment() {
 
         (activity as AppCompatActivity)
             .supportActionBar
+            ?.title = "Detalle"
+
+        (activity as AppCompatActivity)
+            .supportActionBar
             ?.setDisplayHomeAsUpEnabled(true)
 
         // Flecha volver
